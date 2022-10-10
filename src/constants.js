@@ -1,9 +1,9 @@
-import BiHome from 'react-icons/bi';
-import BiBarChartAlt2 from 'react-icons/bi';
-import TbFileInvoice from 'react-icons/tb';
-import TbUsers from 'react-icons/tb';
-import TbCalendarEvent from 'react-icons/tb';
-import FiSettings from 'react-icons/fi';
+import { BiHome } from 'react-icons/bi';
+import { BiBarChartAlt2 } from 'react-icons/bi';
+import { TbFileInvoice } from 'react-icons/tb';
+import { TbUsers } from 'react-icons/tb';
+import { TbCalendarEvent } from 'react-icons/tb';
+import { FiSettings } from 'react-icons/fi';
 
 // import FiMail from 'react-icons/fi';
 // import TbMessageCircle from 'react-icons/tb';
@@ -11,14 +11,69 @@ import FiSettings from 'react-icons/fi';
 // import FiSearch from 'react-icons/fi';
 // import TbFileDownload from 'react-icons/tb';
 // import TbHelp from 'react-icons/tb';
+const iconStyle = { size: 24, color: '#7E84A3' };
 
 export const sideBarLinks = [
-  { title: 'Home', to: '/', icon: <BiHome /> },
-  { title: 'Analytics', to: '/analytics', icon: <BiBarChartAlt2 /> },
-  { title: 'Invoices', to: '/invoices ', icon: <TbFileInvoice /> },
-  { title: 'Customers', to: '/customers', icon: <TbUsers /> },
-  { title: 'Calendar', to: '/calendar', icon: <TbCalendarEvent /> },
-  { title: 'Settings', to: '/settings', icon: <FiSettings /> },
+  {
+    title: 'Home',
+    to: '/',
+    icon: (
+      <BiHome
+        size={iconStyle.size}
+        className="text-theme-gray group-hover:text-theme-black transition-colors"
+      />
+    ),
+  },
+  {
+    title: 'Analytics',
+    to: '/analytics',
+    icon: (
+      <BiBarChartAlt2
+        size={iconStyle.size}
+        className="text-theme-gray group-hover:text-theme-black transition-colors"
+      />
+    ),
+  },
+  {
+    title: 'Invoices',
+    to: '/invoices ',
+    icon: (
+      <TbFileInvoice
+        size={iconStyle.size}
+        className="text-theme-gray group-hover:text-theme-black transition-colors"
+      />
+    ),
+  },
+  {
+    title: 'Customers',
+    to: '/customers',
+    icon: (
+      <TbUsers
+        size={iconStyle.size}
+        className="text-theme-gray group-hover:text-theme-black transition-colors"
+      />
+    ),
+  },
+  {
+    title: 'Calendar',
+    to: '/calendar',
+    icon: (
+      <TbCalendarEvent
+        size={iconStyle.size}
+        className="text-theme-gray group-hover:text-theme-black transition-colors"
+      />
+    ),
+  },
+  {
+    title: 'Settings',
+    to: '/settings',
+    icon: (
+      <FiSettings
+        size={iconStyle.size}
+        className="text-theme-gray group-hover:text-theme-black transition-colors"
+      />
+    ),
+  },
 ];
 
 export const overviewCards = [

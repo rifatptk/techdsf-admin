@@ -4,10 +4,10 @@ import { IoIosNotificationsOutline } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
 const Navbar = () => {
   return (
-    <nav className="border-b p-5 shadow">
-      <div className="flex justify-between items-center">
+    <nav className=" px-5 flex items-center h-[70px] shadow">
+      <div className="w-full flex justify-between items-center">
         <div className="logo text-theme-blue text-2xl  font-bold  ">
-          techDsf
+          techDSF
         </div>
         <div className="right flex items-center space-x-5">
           <div className="search flex items-center border border-theme-midgray rounded-md space-x-3 p-2">
