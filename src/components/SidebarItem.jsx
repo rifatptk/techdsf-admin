@@ -1,20 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const SidebarItem = ({ data }) => {
-  const { title, to, icon } = data;
+const SidebarItem = ({ data: { title, to, icon } }) => {
   return (
-    <div className="sidebarItem group">
-      <Link
-        to={to}
-        className="flex items-center px-[20px] py-[14px] space-x-4 group-hover:border-l-4 group-hover:border-l-theme-blue transition-all"
-      >
-        {icon}
-        <div className="text-sm text-theme-black group-hover:text-theme-black">
-          {title}
-        </div>
-      </Link>
-    </div>
+    <NavLink
+      to={to}
+      end
+      className="sidebarLink group flex items-center px-[16px] py-[14px] space-x-[20px] border-l-4 border-l-transparent [&.active]:border-l-theme-blue transition-all [&.active>.icon]:text-theme-blue [&.active>.title]:text-theme-blue"
+    >
+      {icon}
+      <div className="title text-sm text-theme-black group-hover:text-theme-black">
+        {title}
+      </div>
+    </NavLink>
   );
 };
 

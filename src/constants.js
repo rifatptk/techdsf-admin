@@ -20,7 +20,7 @@ export const sideBarLinks = [
     icon: (
       <BiHome
         size={iconStyle.size}
-        className="text-theme-gray group-hover:text-theme-black transition-colors"
+        className="icon text-theme-gray group-hover:text-theme-black transition-colors"
       />
     ),
   },
@@ -30,27 +30,28 @@ export const sideBarLinks = [
     icon: (
       <BiBarChartAlt2
         size={iconStyle.size}
-        className="text-theme-gray group-hover:text-theme-black transition-colors"
+        className="icon text-theme-gray group-hover:text-theme-black transition-colors"
       />
     ),
   },
   {
     title: 'Invoices',
-    to: '/invoices ',
+    to: '/invoices',
     icon: (
       <TbFileInvoice
         size={iconStyle.size}
-        className="text-theme-gray group-hover:text-theme-black transition-colors"
+        className="icon text-theme-gray group-hover:text-theme-black transition-colors"
       />
     ),
   },
+
   {
     title: 'Customers',
     to: '/customers',
     icon: (
       <TbUsers
         size={iconStyle.size}
-        className="text-theme-gray group-hover:text-theme-black transition-colors"
+        className="icon text-theme-gray group-hover:text-theme-black transition-colors"
       />
     ),
   },
@@ -60,7 +61,7 @@ export const sideBarLinks = [
     icon: (
       <TbCalendarEvent
         size={iconStyle.size}
-        className="text-theme-gray group-hover:text-theme-black transition-colors"
+        className="icon text-theme-gray group-hover:text-theme-black transition-colors"
       />
     ),
   },
@@ -70,7 +71,7 @@ export const sideBarLinks = [
     icon: (
       <FiSettings
         size={iconStyle.size}
-        className="text-theme-gray group-hover:text-theme-black transition-colors"
+        className="icon text-theme-gray group-hover:text-theme-black transition-colors"
       />
     ),
   },
