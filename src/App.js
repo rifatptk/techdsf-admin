@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+// import Sidebar from './components/Sidebar';
 import Analytics from './pages/Analytics';
 import Calendar from './pages/Calendar';
 import Customers from './pages/Customers';
@@ -9,6 +11,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar />
+        {/* <Sidebar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/analytics" element={<Analytics />} />
