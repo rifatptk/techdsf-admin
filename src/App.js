@@ -7,23 +7,34 @@ import Calendar from './pages/Calendar';
 import Customers from './pages/Customers';
 import Home from './pages/Home';
 import Settings from './pages/Settings';
+import { useState } from 'react';
 
 function App() {
+  const [sidebarExpanded, setSidebarExpanded] = useState(true);
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <div className="fixed z-10 w-full ">
+          <Navbar />
+        </div>
         <div className="flex w-full">
-          <Sidebar />
-
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/invoices" element={<Invoices />} />
-            <Route path="/customers" element={<Customers />} />
-            <Route path="/calendar" element={<Calendar />} />
-            <Route path="/settings" element={<Settings />} />
-          </Routes>
+          <div className="fixed z-0 w-[250px] pt-[70px]">
+            <Sidebar
+              isExpanded={sidebarExpanded}
+              setSidebarExpanded={setSidebarExpanded}
+            />
+          </div>
+          <div className="main w-full ml-[250px] mt-[70px]">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/invoices" element={<Invoices />} />
+              <Route path="/customers" element={<Customers />} />
+              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/settings" element={<Settings />} />
+            </Routes>
+          </div>
         </div>
       </BrowserRouter>
     </div>

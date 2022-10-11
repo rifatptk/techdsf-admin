@@ -4,7 +4,7 @@ import { IoIosNotificationsOutline } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
 const Navbar = () => {
   return (
-    <nav className=" px-5 flex items-center h-[70px] shadow">
+    <nav className="bg-white px-5 flex items-center h-[70px] shadow">
       <div className="w-full flex justify-between items-center">
         <div className="logo text-theme-blue text-2xl tracking-widest font-bold  ">
           TECHDSF
