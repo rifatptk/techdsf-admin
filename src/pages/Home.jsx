@@ -3,8 +3,10 @@ import Cards from '../components/Cards';
 
 const Home = () => {
   return (
-    <div className="w-full bg-theme-lightgray p-[40px]">
-      <p className="text-4 text-theme-black font-semibold">Overview</p>
+    <div className="w-full bg-theme-white p-[40px]">
+      <p className="text-4 text-theme-black font-semibold mb-[40px]">
+        Overview
+      </p>
       <Cards />
     </div>
   );
