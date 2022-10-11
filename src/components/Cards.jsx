@@ -7,7 +7,7 @@ const Cards = () => {
     <div className="w-full">
       <div className="flex space-x-[20px] ">
         {overviewCards.map((cardData) => (
-          <Card cardData={cardData} />
+          <Card key={cardData.title} cardData={cardData} />
         ))}
       </div>
     </div>
