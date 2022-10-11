@@ -19,13 +19,21 @@ function App() {
           <Navbar />
         </div>
         <div className="flex w-full">
-          <div className="fixed z-0 w-[250px] pt-[70px]">
+          <div
+            className={`fixed z-0  ${
+              sidebarExpanded ? 'w-[250px]' : 'w-[65px]'
+            } transition-all pt-[70px] `}
+          >
             <Sidebar
               isExpanded={sidebarExpanded}
               setSidebarExpanded={setSidebarExpanded}
             />
           </div>
-          <div className="main w-full ml-[250px] mt-[70px]">
+          <div
+            className={`main w-full ${
+              sidebarExpanded ? 'ml-[250px]' : 'ml-[65px]'
+            } transition-all  mt-[70px]`}
+          >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/analytics" element={<Analytics />} />
