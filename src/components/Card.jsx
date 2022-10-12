@@ -1,32 +1,7 @@
 import { FaLongArrowAltDown } from 'react-icons/fa';
 import Chart from 'react-apexcharts';
 
-const Card = ({ cardData: { title, amount, growth } }) => {
-  const chartData = {
-    options: {
-      chart: {
-        id: 'basic-bar',
-        toolbar: { show: false },
-      },
-      xaxis: {
-        labels: {
-          show: false,
-        },
-      },
-      yaxis: {
-        labels: {
-          show: false,
-        },
-      },
-    },
-    series: [
-      {
-        name: 'series-1',
-        data: [0, 20, 10, 25, 20, 0],
-      },
-    ],
-  };
-
+const Card = ({ cardData: { title, amount, growth, chartData } }) => {
   return (
     <div className="flex-1 border shadow-md p-[20px] rounded-[6px] flex">
       <div className="content flex-1">
@@ -48,8 +23,8 @@ const Card = ({ cardData: { title, amount, growth } }) => {
         <Chart
           options={chartData.options}
           series={chartData.series}
-          type="line"
-          width="200"
+          type="area"
+          width="150"
           height={100}
         />
       </div>

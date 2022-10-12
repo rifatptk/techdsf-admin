@@ -10,7 +10,7 @@ import Settings from './pages/Settings';
 import { useState } from 'react';
 
 function App() {
-  const [sidebarExpanded, setSidebarExpanded] = useState(true);
+  const [sidebarExpanded, setSidebarExpanded] = useState(false);
 
   return (
     <div className="App">
