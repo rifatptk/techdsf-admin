@@ -283,18 +283,20 @@ export const homeChartData = {
     grid: {
       show: false,
     },
-    xaxis: {
-      show: true,
-      labels: {
-        show: true,
-      },
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: false,
-      },
-    },
+    // xaxis: {
+    // show: true,
+    // type: 'category',
+    // categories: ['Jan', 'Feb', 'Mar', 'Apr'],
+    // labels: {
+    //   show: true,
+    // },
+    // axisBorder: {
+    //   show: false,
+    // },
+    // axisTicks: {
+    //   show: false,
+    // },
+    // },
     // yaxis: {
     //   labels: {
     //     show: false,
@@ -304,11 +306,25 @@ export const homeChartData = {
   series: [
     {
       name: 'Offline',
-      data: [0, 20, 10, 25, 20, 0],
+      data: [
+        { x: 'Jan', y: 8 },
+        { x: 'Feb', y: 45 },
+        { x: 'Mar', y: 23 },
+        { x: 'Apr', y: 35 },
+        { x: 'May', y: 23 },
+        { x: 'Jun', y: 33 },
+      ],
     },
     {
       name: 'Online',
-      data: [10, 30, 5, 25, 10, 15, 17, 0],
+      data: [
+        { x: 'Jan', y: 12 },
+        { x: 'Feb', y: 22 },
+        { x: 'Mar', y: 45 },
+        { x: 'Apr', y: 20 },
+        { x: 'May', y: 43 },
+        { x: 'Jun', y: 23 },
+      ],
     },
   ],
 };
