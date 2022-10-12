@@ -259,7 +259,6 @@ export const overviewCards = [
 
 export const homeChartData = {
   options: {
-    title: { text: 'Total Sales', margin: 32, fontFamily: '"Poppins", Arial' },
     chart: {
       id: 'total-sales',
       toolbar: { show: false },
@@ -330,15 +329,28 @@ export const homeChartData = {
 };
 
 export const yourTransaction = [
-  { date: 'Today', source: 'Starbucks Cafe', type: 'Food', amount: 15.14 },
-  { date: 'Today', source: 'Cash In', type: 'Egle', amount: 15.1214 },
-  { date: '14.12.22', source: 'Call In', type: 'Jigla', amount: 154.14 },
   {
+    id: 1,
+    date: 'Today',
+    source: 'Starbucks Cafe',
+    type: 'Food',
+    amount: 15.14,
+  },
+  { id: 2, date: 'Today', source: 'Cash In', type: 'Egle', amount: 15.1214 },
+  { id: 3, date: '14.12.22', source: 'Call In', type: 'Jigla', amount: 154.14 },
+  {
+    id: 4,
     date: 'Today',
     source: 'Spring Garden',
     type: 'Utilities',
     amount: 15.14,
   },
-  { date: 'today', source: 'Rodela Gant', type: 'Organic', amount: 150.14 },
-  { date: 'today', source: 'Email', type: 'Fashion', amount: 1995.14 },
+  {
+    id: 5,
+    date: 'today',
+    source: 'Rodela Gant',
+    type: 'Organic',
+    amount: 150.14,
+  },
+  { id: 6, date: 'today', source: 'Email', type: 'Fashion', amount: 1995.14 },
 ];
