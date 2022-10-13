@@ -1,12 +1,10 @@
-import React from 'react';
-import { overviewCards } from '../constants';
 import Card from './Card';
 
-const Cards = () => {
+const Cards = ({ data }) => {
   return (
     <div className="w-full">
       <div className="flex space-x-[20px] ">
-        {overviewCards.map((cardData) => (
+        {data.map((cardData) => (
           <Card key={cardData.title} cardData={cardData} />
         ))}
       </div>

@@ -4,9 +4,13 @@ import { TbFileInvoice } from 'react-icons/tb';
 import { TbUsers } from 'react-icons/tb';
 import { TbCalendarEvent } from 'react-icons/tb';
 import { FiSettings } from 'react-icons/fi';
+import { MdSync } from 'react-icons/md';
+import { FaPercent } from 'react-icons/fa';
+import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 
-const iconStyle = { size: 24, color: '#7E84A3' };
+const iconStyle = { size: 24 };
 
+//sidebar links data
 export const sideBarLinks = [
   {
     title: 'Home',
@@ -71,10 +75,11 @@ export const sideBarLinks = [
   },
 ];
 
+//homepage cards data
 export const overviewCards = [
   {
     title: 'Avg. Order Value',
-    amount: 306.2,
+    amount: '$306.2',
     growth: -1.3,
     chartData: {
       options: {
@@ -257,6 +262,35 @@ export const overviewCards = [
   },
 ];
 
+//analytics page cards data
+export const analyticsCards = [
+  {
+    title: 'Total Sessions',
+    amount: '14k',
+    growth: 2.3,
+    icon: <MdSync size={iconStyle.size} />,
+  },
+  {
+    title: 'Total Bounce Rate',
+    amount: '56%',
+    growth: 2.1,
+    icon: <FaPercent size={iconStyle.size} />,
+  },
+  {
+    title: 'Total Revenues',
+    amount: '$768,342',
+    growth: -1.8,
+    icon: <RiMoneyDollarCircleLine size={iconStyle.size} />,
+  },
+  {
+    title: 'Total Users',
+    amount: '20k',
+    growth: 1.3,
+    icon: <TbUsers size={iconStyle.size} />,
+  },
+];
+
+//homepage chart data
 export const homeChartData = {
   options: {
     chart: {
@@ -328,6 +362,7 @@ export const homeChartData = {
   ],
 };
 
+//homepage your transaction table's data
 export const yourTransaction = [
   {
     id: 1,
@@ -353,4 +388,11 @@ export const yourTransaction = [
     amount: 150.14,
   },
   { id: 6, date: 'today', source: 'Email', type: 'Fashion', amount: 1995.14 },
+];
+
+//page hader buttons
+export const pageHeaderButtons = [
+  { text: 'Days', background: 'white', color: '#131523' },
+  { text: 'Weeks', background: 'white', color: '#131523' },
+  { text: 'Months' },
 ];
