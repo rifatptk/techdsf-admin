@@ -9,10 +9,10 @@ import PageHeader from '../components/PageHeader';
 const Home = () => {
   return (
     <div className="w-full bg-theme-white p-[40px]">
-      <PageHeader title="Overview" showButtons />
+      <PageHeader title="Overview" showButtons showDatePicker />
       <Cards data={overviewCards} />
       <HomeChart />
-      <div className="flex justify-between space-x-[20px]">
+      <div className="flex justify-between space-x-[20px] ">
         <div className="p-[20px] border rounded-[6px] shadow-md flex-[2]">
           <BasicTable />
         </div>

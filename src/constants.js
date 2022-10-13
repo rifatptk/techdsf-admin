@@ -396,3 +396,91 @@ export const pageHeaderButtons = [
   { text: 'Weeks', background: 'white', color: '#131523' },
   { text: 'Months' },
 ];
+
+//analytics page column chart data
+export const columnChartData = {
+  series: [
+    {
+      name: 'Income',
+      data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+    },
+    {
+      name: 'Expense',
+      data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+    },
+  ],
+  options: {
+    chart: {
+      type: 'bar',
+      height: 350,
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: '55%',
+        endingShape: 'rounded',
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ['transparent'],
+    },
+    legend: { position: 'top', horizontalAlign: 'left' },
+    grid: { show: false },
+    xaxis: {
+      categories: [
+        'Feb 20',
+        'Mar 20',
+        'Apr 20',
+        'May 20',
+        'Jun 20',
+        'Jul 20',
+        'Aug 20',
+        'Sep 20',
+        'Oct 20',
+      ],
+    },
+
+    fill: {
+      opacity: 1,
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return '$ ' + val + '';
+        },
+      },
+    },
+  },
+};
+
+//analytics page pie chart data
+export const pieChartData = {
+  series: [44, 55, 41, 17, 15],
+  options: {
+    chart: {
+      type: 'donut',
+    },
+    legend: {
+      position: 'bottom',
+    },
+    dataLabels: { show: false },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: 'bottom',
+          },
+        },
+      },
+    ],
+  },
+};
