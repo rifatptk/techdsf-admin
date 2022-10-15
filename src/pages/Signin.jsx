@@ -32,7 +32,7 @@ const Signin = () => {
                 className="w-full p-[10px] border-b-[2px] text-[14px] focus:outline-theme-blue/75"
               />
               <input
-                type="text"
+                type="password"
                 placeholder="Password"
                 className="w-full p-[10px] border-b-[2px] text-[14px] focus:outline-theme-blue/75"
               />
@@ -64,6 +64,9 @@ const Signin = () => {
               </div>
             </form>
           </div>
+          <p className="text-[12px] text-theme-black/80 mt-auto cursor-pointer">
+            Term of use. Privacy policy
+          </p>
         </div>
       </div>
     </div>
