@@ -8,7 +8,7 @@ import PageHeader from '../components/PageHeader';
 
 const Home = () => {
   return (
-    <div className="w-full bg-theme-white p-[40px]">
+    <div className="w-full min-h-screen bg-theme-white p-[40px]">
       <PageHeader title="Overview" showButtons showDatePicker />
       <Cards data={overviewCards} />
       <HomeChart />

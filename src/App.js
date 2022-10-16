@@ -15,7 +15,7 @@ import NotFound from './pages/NotFound';
 function App() {
   const [sidebarExpanded, setSidebarExpanded] = useState(false);
 
-  const signedIn = true;
+  const signedIn = false;
 
   return (
     <div className="App">

@@ -290,6 +290,34 @@ export const analyticsCards = [
   },
 ];
 
+//analytics page cards data
+export const invoiceCards = [
+  {
+    title: 'Total Balance',
+    amount: '$1144k',
+    growth: 2.3,
+    icon: <MdSync size={iconStyle.size} />,
+  },
+  {
+    title: 'Total Bounce In',
+    amount: '$565k',
+    growth: 2.1,
+    icon: <FaPercent size={iconStyle.size} />,
+  },
+  {
+    title: 'Total Balance Out',
+    amount: '$768',
+    growth: -1.8,
+    icon: <RiMoneyDollarCircleLine size={iconStyle.size} />,
+  },
+  {
+    title: 'Total Revenues',
+    amount: '20k',
+    growth: 1.3,
+    icon: <TbUsers size={iconStyle.size} />,
+  },
+];
+
 //homepage chart data
 export const homeChartData = {
   options: {
