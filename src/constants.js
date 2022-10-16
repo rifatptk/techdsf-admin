@@ -194,7 +194,7 @@ export const overviewCards = [
       series: [
         {
           name: 'series-1',
-          data: [10, 20, 10, 25, 20, 8],
+          data: [10, 20, 10, 25, 20, 10],
         },
       ],
     },
@@ -255,7 +255,7 @@ export const overviewCards = [
       series: [
         {
           name: 'series-1',
-          data: [0, 20, 10, 25, 20, 0],
+          data: [10, 20, 10, 25, 20, 30],
         },
       ],
     },

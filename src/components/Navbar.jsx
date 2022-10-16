@@ -1,12 +1,33 @@
 import { Avatar, IconButton } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
 import Notifications from './Notifications';
+import UserDropdown from './UserDropdown';
 
 const Navbar = () => {
   const [showNotification, setShowNotification] = useState(false);
+  const [showUserDropdown, setshowUserDropdown] = useState(false);
+
+  const notificationRef = useRef();
+
+  useEffect(() => {
+    const handleDocumentEvent = (e) => {
+      if (e.target.offsetParent.id !== notificationRef.current.id) {
+        setShowNotification(false);
+      }
+    };
+
+    if (showNotification) {
+      document.addEventListener('click', handleDocumentEvent);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleDocumentEvent);
+    };
+  }, [showNotification]);
+
   return (
     <nav className="bg-white px-5 flex items-center h-[70px] shadow">
       <div className="w-full flex justify-between items-center">
@@ -36,7 +57,11 @@ const Navbar = () => {
               />
             </IconButton>
             {showNotification && (
-              <div className="absolute right-0 top-9">
+              <div
+                className="absolute right-0 top-9"
+                id="notifications"
+                ref={notificationRef}
+              >
                 <Notifications />
               </div>
             )}
@@ -50,7 +75,18 @@ const Navbar = () => {
             <p className="text-theme-black font-semibold text-[14px]">
               Liton Ahmed
             </p>
-            <IoIosArrowDown size={24} className="text-theme-gray" />
+            <div className="relative cursor-pointer">
+              <IoIosArrowDown
+                size={24}
+                className="text-theme-gray"
+                onClick={() => setshowUserDropdown(!showUserDropdown)}
+              />
+              {showUserDropdown && (
+                <div className="absolute right-0 top-9">
+                  <UserDropdown />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
