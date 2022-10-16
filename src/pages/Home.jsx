@@ -13,10 +13,10 @@ const Home = () => {
       <Cards data={overviewCards} />
       <HomeChart />
       <div className="flex justify-between space-x-[20px] ">
-        <div className="p-[20px] border rounded-[6px] shadow-md flex-[2]">
+        <div className="bg-white p-[20px] border rounded-[6px] shadow-md flex-[2]">
           <BasicTable />
         </div>
-        <div className="p-[20px] border rounded-[6px] shadow-md flex-1">
+        <div className="bg-white p-[20px] border rounded-[6px] shadow-md flex-1">
           <BalanceContent />
         </div>
       </div>

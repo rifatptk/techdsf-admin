@@ -3,7 +3,7 @@ import Chart from 'react-apexcharts';
 
 const Card = ({ cardData: { title, amount, growth, chartData, icon } }) => {
   return (
-    <div className="flex-1 border shadow-md p-[20px] rounded-[6px] flex">
+    <div className="bg-white flex-1 border shadow-md p-[20px] rounded-[6px] flex">
       <div className="content flex-1">
         <p className="text-theme-gray mb-[20px]">{title}</p>
         <p className="text-[28px] font-semibold text-theme-black">{amount}</p>

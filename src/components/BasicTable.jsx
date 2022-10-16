@@ -26,9 +26,9 @@ export default function BasicTable() {
               <TableCell component="th" scope="row">
                 {row.date}
               </TableCell>
-              <TableCell align="right">{row.source}</TableCell>
-              <TableCell align="right">{row.type}</TableCell>
-              <TableCell align="right">{row.amount}</TableCell>
+              <TableCell align="left">{row.source}</TableCell>
+              <TableCell align="left">{row.type}</TableCell>
+              <TableCell align="right">${row.amount}</TableCell>
             </TableRow>
           ))}
         </TableBody>

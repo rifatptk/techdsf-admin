@@ -392,8 +392,8 @@ export const yourTransaction = [
 
 //page hader buttons
 export const pageHeaderButtons = [
-  { text: 'Days', background: 'white', color: '#131523' },
-  { text: 'Weeks', background: 'white', color: '#131523' },
+  { text: 'Days' },
+  { text: 'Weeks' },
   { text: 'Months' },
 ];
 
@@ -461,14 +461,16 @@ export const columnChartData = {
 //analytics page pie chart data
 export const pieChartData = {
   series: [44, 55, 41, 17, 15],
+
   options: {
     chart: {
       type: 'donut',
     },
     legend: {
       position: 'bottom',
+      // width: '100%',
+      horizontalAlign: 'center',
     },
-    dataLabels: { show: false },
     responsive: [
       {
         breakpoint: 480,
@@ -476,11 +478,24 @@ export const pieChartData = {
           chart: {
             width: 200,
           },
-          legend: {
-            position: 'bottom',
-          },
         },
       },
     ],
   },
 };
+
+//notifications data
+export const notificationsData = [
+  { text: 'New order added', time: 'Just now' },
+  { text: 'Order #675876 delivered', time: '2m ago' },
+  { text: 'Order #674258 cancelled', time: '3m ago' },
+  { text: 'Asad messaged you', time: '3m ago' },
+  { text: 'Welcome to the new era', time: '6m ago' },
+  { text: 'Order #675876 delivered', time: '7m ago' },
+  { text: 'New order added', time: 'Just now' },
+  { text: 'Order #675876 delivered', time: '8m ago' },
+  { text: 'Order #674258 cancelled', time: '10m ago' },
+  { text: 'Asad messaged you', time: '1h ago' },
+  { text: 'Welcome to the new era', time: '1h ago' },
+  { text: 'Order #675876 delivered', time: '2h ago' },
+];

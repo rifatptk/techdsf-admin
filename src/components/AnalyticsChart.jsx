@@ -3,7 +3,7 @@ import { columnChartData } from '../constants';
 
 const AnalyticsChart = () => {
   return (
-    <div className="p-[20px] border rounded-[6px] shadow-md flex-[2]">
+    <div className="bg-white p-[20px] border rounded-[6px] shadow-md flex-[2]">
       <div className="flex justify-between items-center px-[20px]">
         <p className="text-[18px] text-theme-black font-semibold">
           Sales Report

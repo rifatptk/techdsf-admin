@@ -6,7 +6,7 @@ import { MenuItem, Select } from '@mui/material';
 const HomeChart = () => {
   const [filterBy, setfilterBy] = useState('year');
   return (
-    <div className="my-[30px] w-full  border py-[20px] rounded-[6px] shadow-md">
+    <div className="bg-white my-[30px] w-full  border py-[20px] rounded-[6px] shadow-md">
       <div className="flex justify-between items-center px-[20px]">
         <p className="text-[18px] text-theme-black font-semibold">
           Total Sales

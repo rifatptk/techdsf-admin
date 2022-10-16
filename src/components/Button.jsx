@@ -1,11 +1,10 @@
-import React from 'react';
-
-const Button = ({ text, background, color, onClick }) => {
+const Button = ({ text, onClick, active }) => {
   return (
     <div
       onClick={onClick}
-      style={{ background: background || '#0058FF', color: color || '#fff' }}
-      className={`text-[12px] px-[12px] py-[8px] rounded cursor-pointer hover:brightness-90 transition-all`}
+      className={`text-[12px] px-[12px] py-[8px] rounded cursor-pointer hover:brightness-90 transition-all ${
+        active ? 'bg-theme-blue text-white' : 'bg-white text-theme-black'
+      }`}
     >
       {text}
     </div>

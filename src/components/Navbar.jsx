@@ -1,8 +1,12 @@
 import { Avatar, IconButton } from '@mui/material';
+import { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
+import Notifications from './Notifications';
+
 const Navbar = () => {
+  const [showNotification, setShowNotification] = useState(false);
   return (
     <nav className="bg-white px-5 flex items-center h-[70px] shadow">
       <div className="w-full flex justify-between items-center">
@@ -19,7 +23,10 @@ const Navbar = () => {
             />
           </div>
           <div className="notification relative">
-            <IconButton sx={{ m: 0, p: 0 }}>
+            <IconButton
+              sx={{ m: 0, p: 0 }}
+              onClick={() => setShowNotification(!showNotification)}
+            >
               <div className="count w-4 h-4 rounded-full bg-theme-red text-white text-[12px] grid place-items-center absolute -top-[2px] -right-[2px]">
                 9
               </div>
@@ -28,6 +35,11 @@ const Navbar = () => {
                 className="text-theme-gray"
               />
             </IconButton>
+            {showNotification && (
+              <div className="absolute right-0 top-9">
+                <Notifications />
+              </div>
+            )}
           </div>
           <div className="user flex items-center space-x-[12px]">
             <Avatar
