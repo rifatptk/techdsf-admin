@@ -20,3 +20,10 @@ body {
     box-sizing: border-box;
   }
 }
+
+.react-daterange-picker__wrapper {
+  border: none !important;
+}
+.react-daterange-picker__button {
+  display: none !important;
+}
