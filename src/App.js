@@ -10,17 +10,19 @@ import Settings from './pages/Settings';
 import { useState } from 'react';
 import Signup from './pages/Signup';
 import Signin from './pages/Signin';
-import NotFound from './pages/NotFound';
+import { useSelector } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [sidebarExpanded, setSidebarExpanded] = useState(false);
 
-  const signedIn = true;
+  const { isLoggedIn } = useSelector((state) => state.auth);
 
   return (
     <div className="App">
       <BrowserRouter>
-        {!signedIn ? (
+        {!isLoggedIn ? (
           <Routes>
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
@@ -54,13 +56,14 @@ function App() {
                   <Route path="/customers" element={<Customers />} />
                   <Route path="/calendar" element={<Calendar />} />
                   <Route path="/settings" element={<Settings />} />
-                  <Route path="*" element={<NotFound />} />
+                  <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
               </div>
             </div>
           </>
         )}
       </BrowserRouter>
+      <ToastContainer />
     </div>
   );
 }

@@ -1,11 +1,27 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { login } from '../redux/auth/authSlice';
 import bg from '../images/bg.png';
 
 const Signin = () => {
   const navigate = useNavigate();
 
-  const dummyHandler = (e) => {
+  const dispatch = useDispatch();
+
+  const [state, setState] = useState({
+    username: '',
+    password: '',
+  });
+
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
+  console.log(state);
+
+  const submitHandler = (e) => {
     e.preventDefault();
+    dispatch(login(state));
   };
 
   return (
@@ -25,16 +41,26 @@ const Signin = () => {
                 Welcome back! Please login to your account.
               </p>
             </div>
-            <form className="space-y-10">
+            <form onSubmit={submitHandler} className="space-y-10">
               <input
                 type="text"
+                required
                 placeholder="Username"
+                autoComplete="new-password"
                 className="w-full p-[10px] border-b-[2px] text-[14px] focus:outline-theme-blue/75"
+                name="username"
+                onChange={handleChange}
+                value={state.username}
               />
               <input
                 type="password"
+                required
                 placeholder="Password"
                 className="w-full p-[10px] border-b-[2px] text-[14px] focus:outline-theme-blue/75"
+                name="password"
+                autoComplete="new-password"
+                onChange={handleChange}
+                value={state.password}
               />
               <div className="flex justify-between space-x-2 text-[14px]">
                 <div className="flex items-center space-x-[15px]">
@@ -50,7 +76,7 @@ const Signin = () => {
               {/* buttons */}
               <div className="flex justify-between">
                 <button
-                  onClick={dummyHandler}
+                  type="submit"
                   className="w-[185px] h-[50px] grid place-items-center bg-theme-blue text-white rounded-[6px] hover:bg-theme-blue/90 transition-colors"
                 >
                   Login
