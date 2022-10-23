@@ -512,6 +512,144 @@ export const pieChartData = {
   },
 };
 
+//analytics page data table data
+export const analyticsTableData = {
+  columns: [
+    { field: 'channels', headerName: 'CHANNELS', width: 130, flex: 1 },
+    { field: 'sessions', headerName: 'SESSIONS', width: 130, flex: 1 },
+    {
+      field: 'bounce',
+      headerName: 'BOUNCE RATE',
+      width: 90,
+      flex: 1,
+    },
+
+    {
+      field: 'traffic',
+      headerName: 'TRAFFIC',
+      align: 'center',
+      headerAlign: 'center',
+      width: 160,
+      flex: 1,
+    },
+    {
+      field: 'sales',
+      headerName: 'SALES',
+      align: 'right',
+      headerAlign: 'right',
+      width: 160,
+      flex: 1,
+    },
+  ],
+
+  rows: [
+    {
+      id: 1,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 2,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 3,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 4,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 5,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 6,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 7,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 8,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 9,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 10,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 11,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 12,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+    {
+      id: 13,
+      channels: 'Direct',
+      sessions: '67,892',
+      bounce: '26.3%',
+      traffic: '8.1%',
+      sales: 1132,
+    },
+  ],
+};
+
 //notifications data
 export const notificationsData = [
   { text: 'New order added', time: 'Just now' },
